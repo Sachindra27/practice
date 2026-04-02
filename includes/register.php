@@ -19,13 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert user
-    $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $password);
-
-    if ($stmt->execute()) {
-        echo "Registered successfully";
-    } else {
-        echo "Error";
-    }
+  
 }
 ?>
